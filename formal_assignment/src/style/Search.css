@@ -41,7 +41,16 @@
     position: absolute;
     border-radius: 20px;
     height: 400px;
-    background-color: white;
+    background-color: #F0F4F7;
+    transition: height 0.3s ease;
+}
+
+@keyframes modal {
+    from {
+        height: 0px;
+    } to {
+        height: 400px
+    }
 }
 
 

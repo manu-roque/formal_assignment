@@ -31,8 +31,8 @@ const Search: React.FC = () => {
             </div>
             <div className="modal-container" onMouseDown={(e) => e.preventDefault()}>
                 {showModal && (
-                        <div className="modal">
-                        </div>
+                    <div className="modal">
+                    </div>
                 )}
             </div>
         </div>
