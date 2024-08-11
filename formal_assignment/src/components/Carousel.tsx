@@ -30,6 +30,7 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
         if (isDragging) return;
         setIsDragging(false);
 
+
         setTranslateX(0);
     }
 
@@ -59,8 +60,8 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
             ref={containerRef}
             style={{
                 overflow: 'hidden',
-                width: '100%',
-                margin: 'auto',
+                width: '97%',
+                // margin: 'auto',
                 userSelect: 'none'
             }}
             onMouseDown={handleMouseDown}
@@ -73,7 +74,7 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
                     display: 'flex',
                     transform: `translateX(calc(-${currentIndex * 100}% + ${translateX}px))`,
                     transition: isDragging ? 'none' : 'transform 0.5s ease-in-out',
-                    gap: '50px'
+                    gap: '20px'
                 }}
             >
                 {children.map((child, index) => (

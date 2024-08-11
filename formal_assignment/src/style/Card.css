@@ -19,9 +19,10 @@
 }
 
 .logs-container {
-    width: 500px;
+    width: 600px;
     height: auto;
     display: flex;
+    justify-content: space-between;
     border-radius: 10px;
     background-color: #f0f4f7;
 

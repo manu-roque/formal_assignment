@@ -50,6 +50,10 @@ const Card: React.FC<CardProps> = ({title, type}: CardProps) => {
             return (
                 <></>
             )
+        } else if (type === 'observe') {
+            return (
+                <></>
+            )
         }
     }
 
