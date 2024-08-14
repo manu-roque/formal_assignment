@@ -13,14 +13,12 @@ const Saved: React.FC = () => {
     return (
             <div className="saved-container">
                 <div className="title-text">Saved</div>
-                        <div className="saved-card-container">
-                            <Carousel>
-                                <Card title="Access" type="logs" />
-                                <Card title="Access" type="logs" />
-                                <Card title="Access" type="logs" />
-                                <Card title="Access" type="logs" />
-                            </Carousel>
-                        </div>
+                <div className="saved-card-container">
+                    <Card title="Access" type="logs" />
+                    <Card title="Access" type="logs" />
+                    <Card title="Access" type="logs" />
+                    <Card title="Access" type="logs" />
+                </div>
             </div>
     );
 }

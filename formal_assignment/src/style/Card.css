@@ -22,6 +22,7 @@
     width: 600px;
     height: auto;
     display: flex;
+    flex-shrink: 0;
     justify-content: space-between;
     border-radius: 10px;
     background-color: #f0f4f7;
