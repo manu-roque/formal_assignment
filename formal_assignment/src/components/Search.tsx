@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Tabs from './Tabs';
+import Results from './Results';
 import '../style/Search.css';
 
 const Search: React.FC = () => {
@@ -14,9 +16,7 @@ const Search: React.FC = () => {
         setIsFocused(false)
         setShowModal(false)
     }
-    const handleOpen = () => {
-        setShowModal(!showModal)
-    }
+
 
     return (
         <div>
@@ -29,11 +29,31 @@ const Search: React.FC = () => {
                     onBlur={handleBlur}
                 />
             </div>
+
             <div className="modal-container" onMouseDown={(e) => e.preventDefault()}>
                 {showModal && (
-                    <div className="modal">
-                    </div>
-                )}
+                    <>
+                        <div className="overlay" onClick={handleBlur}/>
+                        <div className="modal">
+                            <div className="question-list-container">
+                                <div className="question">How many times user X has made Y?</div>
+                                <div className="question">How many times user X has made Y?</div>
+                                <div className="question">How many times user X has made Y?</div>
+                                <div className="question">How many times user X has made Y?</div>
+                                <div className="question">How many times user X has made Y?</div>
+                                <div className="question">How many times user X has made Y?</div>
+                                <div className="question">How many times user X has made Y?</div>
+                            </div>
+                            <div className="tabs-container">
+                                <Tabs />
+                            </div>
+                            <div className="results-container">
+                                <Results />
+                            </div>
+                        </div>
+                    </>
+
+                )} 
             </div>
         </div>
     );

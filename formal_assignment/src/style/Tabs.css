@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    gap: 20px;
+    width: 500px;
+}
+
+.tab-button {
+    width: auto;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ddd; /* Optional: adds a border to the div */
+    cursor: pointer;
+
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+.tab-button:hover {
+    background-color: lightgrey;
+}
