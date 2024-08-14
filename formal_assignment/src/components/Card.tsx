@@ -1,16 +1,17 @@
 import React, { useState, ReactNode } from 'react';
 import { ChartContainer } from '@mui/x-charts/ChartContainer';
 import { BarChart, BarPlot } from '@mui/x-charts/BarChart';
-import HeatMap from '@uiw/react-heat-map';
-import * as d3 from 'd3';
+import Heatmap from './Heatmap';
 
 import '../style/Card.css';
 
 interface CardProps {
     title: string;
     type: string;
+    topText: string;
+    bottomText: string;
 }
-const Card: React.FC<CardProps> = ({title, type}: CardProps) => {
+const Card: React.FC<CardProps> = ({title, type, topText, bottomText}: CardProps) => {
 
     const uData = [8000, 3000, 2000, 2780, 1890, 2390, 3490, 200, 2000, 3000, 2100, 200, 5000, 400];
     const xLabels = [
@@ -48,11 +49,35 @@ const Card: React.FC<CardProps> = ({title, type}: CardProps) => {
             )
         } else if (type === 'access') {
             return (
-                <></>
+                <>
+                    <Heatmap />
+                </>
             )
         } else if (type === 'observe') {
             return (
-                <></>
+                <div className="grey-container-squares">
+                    <div className="grey-square">
+                        <div style={{fontWeight: 'bold', position: 'relative', top: '15px'}}>Total queries</div>
+                        <h1>78,513</h1>
+                    </div>
+                    <div className="grey-square">
+                        <div style={{fontWeight: 'bold', position: 'relative', top: '15px'}}>Weekly trend</div>
+                        <h1>250%</h1>
+                    </div>
+                </div>
+            )
+        } else if (type === 'sidecars') {
+            return (
+                <div className="grey-container-squares">
+                    <div className="grey-square">
+                        <div style={{fontWeight: 'bold', position: 'relative', top: '15px'}}>Total queries</div>
+                        <h1>78,513</h1>
+                    </div>
+                    <div className="grey-square">
+                        <div style={{fontWeight: 'bold', position: 'relative', top: '15px'}}>Weekly trend</div>
+                        <h1>250%</h1>
+                    </div>
+                </div>
             )
         }
     }
@@ -62,14 +87,14 @@ const Card: React.FC<CardProps> = ({title, type}: CardProps) => {
                 <div className="logs-text">
                     <div>
                         <div className="title-text small">{title}</div>
-                        <div>Updated 15 mins ago</div>
+                        <div style={{color: 'grey', fontSize: '12px'}}>Updated 15 minutes ago</div>
                     </div>
-                    <div>12 new logs</div>
+                    <div style={{ position: 'relative', color: 'grey', fontSize: '12px', bottom: '20px'}}>12 New Logs Since Update</div>
                 </div>
                 <div className="logs-graph">
-                    <div style={{marginBottom: '0px',fontWeight: 'bold', fontSize:"12px", marginTop: '20px', marginLeft: '10px'}} >Logs/time</div>
+                    <div style={{marginBottom: '0px',  fontWeight: 'bold', fontSize:"12px", marginTop: '20px', marginLeft: '10px'}} >{topText}</div>
                     {cardData(type)}
-                    <div style={{fontWeight: 'bold', fontSize:"12px", marginTop: '10px', marginLeft: '10px'}}>Jan 2, 09:18:00</div>
+                    <div style={{fontWeight: 'bold', color: 'grey', fontSize:"12px", marginTop: '10px', marginLeft: '10px'}}>{bottomText}</div>
                 </div>
             </div>
     )
