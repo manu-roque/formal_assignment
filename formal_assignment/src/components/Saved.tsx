@@ -2,8 +2,6 @@ import React from 'react'
 import Card from './Card';
 import '../style/Saved.css'
 
-
-
 const Saved: React.FC = () => {
     return (
             <div className="saved-container">

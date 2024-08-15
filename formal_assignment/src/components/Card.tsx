@@ -1,6 +1,6 @@
-import React, { useState, ReactNode } from 'react';
+import React  from 'react';
 import { ChartContainer } from '@mui/x-charts/ChartContainer';
-import { BarChart, BarPlot } from '@mui/x-charts/BarChart';
+import { BarPlot } from '@mui/x-charts/BarChart';
 import Heatmap from './Heatmap';
 
 import '../style/Card.css';

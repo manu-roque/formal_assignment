@@ -1,17 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import '../style/Results.css';
 import FolderOpenOutlinedIcon from '@mui/icons-material/FolderOpenOutlined';
 import UpgradeIcon from '@mui/icons-material/Upgrade';
 
 const Results: React.FC = () => {
-    const [color, setColor] = React.useState('lightskyblue');
-
     const blue = '#4d6df8';
     const purple = '#2d17ca';
     const black = '#495361';
     const tools = '#7079e5';
-
-
 
     const dataArray = [
         {
@@ -93,7 +89,6 @@ const Results: React.FC = () => {
 
     const Section = (section: string, color: string) => {
         const filteredData = dataArray.filter(item => item["section"] === section);
-
 
         return (
             <>

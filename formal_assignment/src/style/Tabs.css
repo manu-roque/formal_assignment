@@ -14,7 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #ddd; /* Optional: adds a border to the div */
+    border: 2px solid #ddd;
     cursor: pointer;
 
     background-color: white;

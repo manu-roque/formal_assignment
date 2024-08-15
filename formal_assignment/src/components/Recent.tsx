@@ -10,8 +10,7 @@ const Recent: React.FC = () => {
                 title="logs" 
                 type="logs" 
                 topText="Logs/Time" 
-                bottomText="Jan 2 9:19:00"
-                                    
+                bottomText="Jan 2 9:19:00"                   
             />
         </div>
     )

@@ -7,7 +7,6 @@ import Saved from './components/Saved';
 const App: React.FC = () => {
   return (
     <Main>
-      {/* make the card into a component so it can be reused around with props and all */}
       <Search />
       <Recent />
       <Saved />
