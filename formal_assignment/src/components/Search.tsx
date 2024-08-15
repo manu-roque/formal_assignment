@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Tabs from './Tabs';
 import Results from './Results';
 import '../style/Search.css';
+import ImportExportIcon from '@mui/icons-material/ImportExport';
 
 const Search: React.FC = () => {
     const [isFocused, setIsFocused] = useState(false);
@@ -50,7 +51,50 @@ const Search: React.FC = () => {
                             <div className="results-container">
                                 <Results />
                             </div>
-                        </div>
+                            <div className="bottom-modal-container">
+                                <div style={{ 
+                                    display: 'flex', 
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    gap: '5px',
+                                    fontWeight: 'bold',
+                                    color: 'grey'
+                                    }}>
+                                    <div className='move'>
+                                        <ImportExportIcon sx={{color: 'gray'}} />
+                                    </div>
+                                    Move
+                                </div>
+                            <div className="open-close-container">
+                                <div style={{ 
+                                    display: 'flex', 
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    gap: '5px',
+                                    fontWeight: 'bold',
+                                    color: 'grey'
+                                }}>
+                                    <div className="open">
+                                            <ImportExportIcon sx={{color: 'gray'}} />
+                                    </div>
+                                    Open
+                                </div>
+                                <div style={{ 
+                                    display: 'flex', 
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    gap: '5px',
+                                    fontWeight: 'bold',
+                                    color: 'grey'
+                                }}>
+                                    <div className="close" onClick={handleBlur}>
+                                        <ImportExportIcon sx={{color: 'gray'}} />
+                                    </div>
+                                    Close
+                                </div>
+                                </div>
+                                </div>
+                            </div>
                     </>
 
                 )} 

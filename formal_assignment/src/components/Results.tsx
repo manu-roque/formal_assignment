@@ -5,6 +5,11 @@ import FolderOpenOutlinedIcon from '@mui/icons-material/FolderOpenOutlined';
 const Results: React.FC = () => {
     const [color, setColor] = React.useState('lightskyblue');
 
+    const blue = 'lightskyblue';
+    const purple = 'purple';
+    const black = 'black';
+
+
 
     const dataArray = [
         {
@@ -34,35 +39,58 @@ const Results: React.FC = () => {
         {
             section: 'security',
             icon: 'folder',
-            title: 'ETL',
+            title: 'Access',
             description: 'description'
         },
         {
             section: 'security',
             icon: 'folder',
-            title: 'ETL',
+            title: 'Logs',
             description: 'description'
         },
         {
             section: 'security',
             icon: 'folder',
-            title: 'ETL',
+            title: 'Discovery',
             description: 'description'
         },
         {
             section: 'security',
             icon: 'folder',
-            title: 'ETL',
+            title: 'Policies',
             description: 'description'
         },
+        {
+            section: 'security',
+            icon: 'folder',
+            title: 'Compliance',
+            description: 'description'
+        },
+        {
+            section: 'store',
+            icon: 'folder',
+            title: 'AWS',
+            description: 'description'
+        },
+        {
+            section: 'store',
+            icon: 'folder',
+            title: 'Datadog',
+            description: 'description'
+        },
+        {
+            section: 'store',
+            icon: 'folder',
+            title: 'Compliance',
+            description: 'description'
+        },
+
     ]
 
 
 
-    const Section = (section: string) => {
-
+    const Section = (section: string, color: string) => {
         const filteredData = dataArray.filter(item => item["section"] === section);
-    
 
 
         return (
@@ -70,8 +98,7 @@ const Results: React.FC = () => {
             {filteredData.map((item, index) => (
                 <div className="content">
                     <div style={{ width: '300px', display: 'flex'}}>
-                        <div className="icon-square">
-                            
+                        <div className="icon-square" style={{ backgroundColor: color}}>
                             <FolderOpenOutlinedIcon
                             sx={{fontSize: '20px', color: 'white'}}
                             />
@@ -89,10 +116,13 @@ const Results: React.FC = () => {
         <div className="results">
             <div className="section">
                 <div className="section-title">DATA</div>
-                {Section('data')}
+                {Section('data', blue)}
                 <br/>
                 <div className="section-title">SECURITY</div>
-                {Section('security')}
+                {Section('security', purple)}
+                <br/>
+                <div className="section-title">STORE</div>
+                {Section('store', black)}
             </div>
         </div>     
     )
