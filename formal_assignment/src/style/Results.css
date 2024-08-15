@@ -27,6 +27,8 @@
 
 .content {
     position: relative;
+    display: flex;
+    justify-content: space-between;
     top: 10px;
     width: 100%;
     height: 40px;
@@ -34,6 +36,26 @@
     border-radius: 5px;
     margin-bottom: 2px;
     transition: background-color 0.3s ease;
+}
+
+.side-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 30px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.side-button:hover {
+    background-color: lightgray;
 }
 
 .content:hover {

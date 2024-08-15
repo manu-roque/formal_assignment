@@ -1,13 +1,15 @@
 import React, { useEffect } from 'react';
 import '../style/Results.css';
 import FolderOpenOutlinedIcon from '@mui/icons-material/FolderOpenOutlined';
+import UpgradeIcon from '@mui/icons-material/Upgrade';
 
 const Results: React.FC = () => {
     const [color, setColor] = React.useState('lightskyblue');
 
-    const blue = 'lightskyblue';
-    const purple = 'purple';
-    const black = 'black';
+    const blue = '#4d6df8';
+    const purple = '#2d17ca';
+    const black = '#495361';
+    const tools = '#7079e5';
 
 
 
@@ -105,6 +107,11 @@ const Results: React.FC = () => {
                         </div>
                         <div className="result-title">{item.title}</div>
                         <div className="result-description">{item.description}</div>
+                    </div>
+                    <div className='side-button'>
+                        ⌥
+                        <UpgradeIcon sx={{color: 'grey'}} />
+                        {item.title[0]}
                     </div>
                 </div>
             ))}

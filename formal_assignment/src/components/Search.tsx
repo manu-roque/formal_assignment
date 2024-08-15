@@ -3,6 +3,8 @@ import Tabs from './Tabs';
 import Results from './Results';
 import '../style/Search.css';
 import ImportExportIcon from '@mui/icons-material/ImportExport';
+import GridViewIcon from '@mui/icons-material/GridView';
+import KeyboardCommandKeyIcon from '@mui/icons-material/KeyboardCommandKey';
 
 const Search: React.FC = () => {
     const [isFocused, setIsFocused] = useState(false);
@@ -29,6 +31,11 @@ const Search: React.FC = () => {
                     onFocus={handleFocus}
                     onBlur={handleBlur}
                 />
+                <div className="searchbar-button">
+                    <GridViewIcon sx={{fontSize: 20}} />&nbsp;&nbsp;
+                    <KeyboardCommandKeyIcon sx={{fontSize: 12 }}/>&nbsp;
+                    E
+                </div>
             </div>
 
             <div className="modal-container" onMouseDown={(e) => e.preventDefault()}>
